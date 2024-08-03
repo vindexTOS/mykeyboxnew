@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fRvS3ju95e1IK+DGHpuj6OU3gMiKPLlszJL6qzzmwb1PRooT2rA6xfBuas+y1Y4qu+so3wNOn9c1qLCzv7BexA==",
+  "dgSpecHash": "Wdkyd8VHSLVm7b05u7JKAfD9ztQU6HB0TD+I4zYQXucTSerGmTwPRyl7oRI5DqtsxtkNPfqic76635eZfuA8fg==",
   "success": true,
   "projectFilePath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Student\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

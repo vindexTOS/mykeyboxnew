@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "TMMwK9R4bCr+s/Txu9g6jW4Dh1OsAaB1mmXe+XMEVMpow9C8K1sCYusfd8joDbtVeopEvH7YJMExtjdbnocydA==",
+  "dgSpecHash": "apPeUfBjsXJhVAcwLwNNNb9Xvu0LVWwyd5rtEYlRyHPR46tqg34rqBA/Yft76f65uT/q3PgmbK7UsOGvU+k0Qg==",
   "success": true,
   "projectFilePath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Modules\\MyKeyBox.Modules.BackOffice.Api\\MyKeyBox.Modules.BackOffice.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Student\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
   ],
   "logs": []
