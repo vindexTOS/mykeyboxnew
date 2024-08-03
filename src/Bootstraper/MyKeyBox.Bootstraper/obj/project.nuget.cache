@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "n8DC1Kho8Nkm4vYO7Q46Bt17c9BBOjnaPLh6F/3bAhwYJUyrd3psiIMzTLWW72/5DkO6HVmKBVjfIMx3xIEvUw==",
+  "success": true,
+  "projectFilePath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Bootstraper\\MyKeyBox.Bootstraper\\MyKeyBox.Bootstraper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Student\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TMMwK9R4bCr+s/Txu9g6jW4Dh1OsAaB1mmXe+XMEVMpow9C8K1sCYusfd8joDbtVeopEvH7YJMExtjdbnocydA==",
+  "success": true,
+  "projectFilePath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Modules\\MyKeyBox.Modules.BackOffice.Api\\MyKeyBox.Modules.BackOffice.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Student\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
