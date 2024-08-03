@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\MyKeyBox.Shared.Abstractions\MyKeyBox.Shared.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Shared\MyKeyBox.Shared.Infrastructure\MyKeyBox.Shared.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

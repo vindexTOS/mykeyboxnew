@@ -33,9 +33,6 @@
             "projectReferences": {
               "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Modules\\MyKeyBox.Modules.BackOffice.Core\\MyKeyBox.Modules.BackOffice.Core.csproj": {
                 "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Modules\\MyKeyBox.Modules.BackOffice.Core\\MyKeyBox.Modules.BackOffice.Core.csproj"
-              },
-              "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj": {
-                "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj"
               }
             }
           }
@@ -98,6 +95,9 @@
             "projectReferences": {
               "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Abstractions\\MyKeyBox.Shared.Abstractions.csproj": {
                 "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Abstractions\\MyKeyBox.Shared.Abstractions.csproj"
+              },
+              "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj": {
+                "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj"
               }
             }
           }

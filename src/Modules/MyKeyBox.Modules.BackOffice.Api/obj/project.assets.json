@@ -52,7 +52,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "MyKeyBox.Shared.Abstractions": "1.0.0"
+          "MyKeyBox.Shared.Abstractions": "1.0.0",
+          "MyKeyBox.Shared.Infrastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyKeyBox.Modules.BackOffice.Core.dll": {}
@@ -174,8 +175,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "MyKeyBox.Modules.BackOffice.Core >= 1.0.0",
-      "MyKeyBox.Shared.Infrastructure >= 1.0.0"
+      "MyKeyBox.Modules.BackOffice.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -211,9 +211,6 @@
           "projectReferences": {
             "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Modules\\MyKeyBox.Modules.BackOffice.Core\\MyKeyBox.Modules.BackOffice.Core.csproj": {
               "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Modules\\MyKeyBox.Modules.BackOffice.Core\\MyKeyBox.Modules.BackOffice.Core.csproj"
-            },
-            "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj": {
-              "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj"
             }
           }
         }

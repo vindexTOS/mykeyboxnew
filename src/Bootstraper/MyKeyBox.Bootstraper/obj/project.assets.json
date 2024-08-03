@@ -52,8 +52,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "MyKeyBox.Modules.BackOffice.Core": "1.0.0",
-          "MyKeyBox.Shared.Infrastructure": "1.0.0"
+          "MyKeyBox.Modules.BackOffice.Core": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyKeyBox.Modules.BackOffice.Api.dll": {}
@@ -66,7 +65,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "MyKeyBox.Shared.Abstractions": "1.0.0"
+          "MyKeyBox.Shared.Abstractions": "1.0.0",
+          "MyKeyBox.Shared.Infrastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyKeyBox.Modules.BackOffice.Core.dll": {}

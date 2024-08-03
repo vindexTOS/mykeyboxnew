@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\MyKeyBox.Shared.Infrastructure\MyKeyBox.Shared.Infrastructure.csproj" />
     <ProjectReference Include="..\MyKeyBox.Modules.BackOffice.Core\MyKeyBox.Modules.BackOffice.Core.csproj" />
   </ItemGroup>
 
