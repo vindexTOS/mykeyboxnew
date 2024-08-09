@@ -6,5 +6,5 @@ namespace MyKeyBox.Modules.BackOffice.Api.Controllers;
 internal class HomeController:BaseController
 {
     [HttpGet]
-    public IActionResult Get() => Ok("Hello World");
+    public IActionResult Get() => Ok();
 }

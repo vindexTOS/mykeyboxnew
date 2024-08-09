@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "et5kj2Kp92eaDXbIR9qpxBxeNw7KfzZWMgV2xg0K5ZqPoOMAOMFmf+3ocSVmbewZx512gcjElYy4qo5GTPPUSw==",
+  "dgSpecHash": "CLOsmBi/1tj1OYUiL3Dcf0q2LJAD4I49GQz5s8fatAHsLPR3q6wVxCa9eVyFzD5aZuUpWuAE9sFIKWzsXLXbzQ==",
   "success": true,
   "projectFilePath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Bootstraper\\MyKeyBox.Bootstraper\\MyKeyBox.Bootstraper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Student\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\Student\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+    "C:\\Users\\Student\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.7.0\\swashbuckle.aspnetcore.swagger.6.7.0.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.7.0\\swashbuckle.aspnetcore.swaggergen.6.7.0.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.7.0\\swashbuckle.aspnetcore.swaggerui.6.7.0.nupkg.sha512"
   ],
   "logs": []
 }

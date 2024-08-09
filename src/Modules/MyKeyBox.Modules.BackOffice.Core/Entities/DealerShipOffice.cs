@@ -1,29 +1,26 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MyKeyBox.Modules.BackOffice.Core.Entities.Common;
 
-namespace MyKeyBox.Modules.BackOffice.Core.DTO.Dealer;
+namespace MyKeyBox.Modules.BackOffice.Core.Entities;
 
-public class DealerDto
+internal class DealerShipOffice:Entity
 {
-    public int DealerId { get; }
-    [Required] 
     public string DealerName {get; set;} = null!;
-    [Required]
+
     public double LocationLat {get; set;}
-    [Required]
+
     public double LocationLong {get; set;}
-    [Required] [Url]
+
     public string GoogleLink {get; set;} = null!;
-    [Required]
+
     public byte WorkingHoursPerDay { get; set; }
-    [Required] 
+
     public string ResponsiblePersonFirstName { get; set; } = null!;
-    [Required] 
     public string ResponsiblePersonLastName{ get; set; } = null!;
-    [Required] 
+
     public string ResponsiblePersonJobTitle {get; set; } = null!;
-    [Required] [Phone]
+
     public string ResponsiblePersonPhone {get; set; } = null!;
-    [Required] [EmailAddress]
+
     public string ResponsiblePersonEmail {get; set; } = null!;
     // Start Nullable Data
     public string? BackupPersonFirstName { get; set; }
@@ -32,10 +29,8 @@ public class DealerDto
     
     public string? BackupPersonJobTitle { get; set; }
     
-    [Compare(nameof(ResponsiblePersonPhone),ErrorMessage = "Backup phone number and Responsible Person Phone is matched please change number")]
     public string? BackupPersonPhone { get; set; }
     
-    [Compare(nameof(ResponsiblePersonEmail),ErrorMessage = "Backup email and Responsible Person Email is matched please change number")]
     public string? BackupPersonEmail { get; set; }
 
     public string? Notes { get; set; }

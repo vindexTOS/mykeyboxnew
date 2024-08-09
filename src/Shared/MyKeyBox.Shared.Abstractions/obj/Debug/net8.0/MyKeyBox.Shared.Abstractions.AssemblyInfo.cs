@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyKeyBox.Shared.Abstractions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+425f8edf50dfb6795f03677a43c2bc415df8ff2c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ba6de6f60b091b58787eb16816ca596111c3aac")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyKeyBox.Shared.Abstractions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyKeyBox.Shared.Abstractions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
