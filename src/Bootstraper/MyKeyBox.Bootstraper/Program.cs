@@ -16,6 +16,8 @@ var app = builder.Build();
         app.UseSwaggerUI();
         app.UseDeveloperExceptionPage();
     }
+
+    app.UseInfrastructure();
     app.UseRouting();
     app.MapControllers();
     app.Run();

@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using MyKeyBox.Shared.Infrastructure.Api;
 
@@ -13,6 +14,13 @@ internal static class Extensions
         {
             manager.FeatureProviders.Add(new InternalControllerFeatureProvider());
         });
+        collection.AddSingleton<ErrorHandlerMiddleware>();
         return collection;
+    }
+
+    public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder builder)
+    {
+        builder.UseMiddleware<ErrorHandlerMiddleware>();
+        return builder;
     }
 }

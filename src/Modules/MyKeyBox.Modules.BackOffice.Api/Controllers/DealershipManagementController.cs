@@ -12,4 +12,11 @@ internal class DealershipManagementController:BaseController
         await Task.CompletedTask;
         return Ok();
     }
+    
+    [HttpPut(nameof(DealerRegistration))]
+    public async Task<IActionResult> UpdateDealership(DealerShipOfficeDto dealerShipOfficeDto)
+    {
+        await Task.CompletedTask;
+        return Ok();
+    }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyKeyBox.Modules.BackOffice.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ba6de6f60b091b58787eb16816ca596111c3aac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b05f96ddf0241306ea1d57c36d844093055b9b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyKeyBox.Modules.BackOffice.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyKeyBox.Modules.BackOffice.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

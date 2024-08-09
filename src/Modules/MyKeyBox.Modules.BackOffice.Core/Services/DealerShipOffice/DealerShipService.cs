@@ -1,13 +1,14 @@
 ﻿using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip;
-using MyKeyBox.Shared.Abstractions.Shared;
+using MyKeyBox.Modules.BackOffice.Core.Exceptions;
+
 
 namespace MyKeyBox.Modules.BackOffice.Core.Services.DealerShipOffice;
 
 internal class DealerShipService:IDealerShipOfficeService
 {
-    public async Task<Result> CreateDealerShip(DealerShipOfficeDto dealerShipOffice)
+    public async Task CreateDealerShip(DealerShipOfficeDto dealerShipOffice)
     {
+        throw new DealershipOfficeAlreadyExistException(dealerShipOffice.DealerName);
         await Task.CompletedTask;
-        return Result.Success();
     }
 }

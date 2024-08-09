@@ -1,4 +1,4 @@
-﻿using MyKeyBox.Modules.BackOffice.Core.Entities.Common;
+﻿using MyKeyBox.Shared.Abstractions.Common;
 
 namespace MyKeyBox.Modules.BackOffice.Core.Entities;
 

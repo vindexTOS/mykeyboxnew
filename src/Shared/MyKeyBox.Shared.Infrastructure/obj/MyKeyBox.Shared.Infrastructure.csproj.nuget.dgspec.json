@@ -4,14 +4,14 @@
     "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj": {}
   },
   "projects": {
-    "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj": {
+    "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Abstractions\\MyKeyBox.Shared.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj",
-        "projectName": "MyKeyBox.Shared.Infrastructure",
-        "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj",
+        "projectUniqueName": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Abstractions\\MyKeyBox.Shared.Abstractions.csproj",
+        "projectName": "MyKeyBox.Shared.Abstractions",
+        "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Abstractions\\MyKeyBox.Shared.Abstractions.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\obj\\",
+        "outputPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,86 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.107/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj",
+        "projectName": "MyKeyBox.Shared.Infrastructure",
+        "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\MyKeyBox.Shared.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+        "outputPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Abstractions\\MyKeyBox.Shared.Abstractions.csproj": {
+                "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Abstractions\\MyKeyBox.Shared.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Humanizer": {
+              "target": "Package",
+              "version": "[2.14.1, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.4.0, )"

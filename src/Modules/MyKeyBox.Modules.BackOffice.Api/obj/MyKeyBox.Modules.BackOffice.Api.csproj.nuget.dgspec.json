@@ -170,6 +170,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -221,7 +229,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Abstractions\\MyKeyBox.Shared.Abstractions.csproj": {
+                "projectPath": "F:\\Programing\\c# .NET\\My_Key_Box\\src\\Shared\\MyKeyBox.Shared.Abstractions\\MyKeyBox.Shared.Abstractions.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -234,6 +246,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Humanizer": {
+              "target": "Package",
+              "version": "[2.14.1, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.4.0, )"
