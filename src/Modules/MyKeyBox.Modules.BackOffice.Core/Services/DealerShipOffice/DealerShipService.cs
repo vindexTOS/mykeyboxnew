@@ -6,9 +6,23 @@ namespace MyKeyBox.Modules.BackOffice.Core.Services.DealerShipOffice;
 
 internal class DealerShipService:IDealerShipOfficeService
 {
-    public async Task CreateDealerShip(DealerShipOfficeDto dealerShipOffice)
+    public Task GetAsync(int id)
     {
-        throw new DealershipOfficeAlreadyExistException(dealerShipOffice.DealerName);
-        await Task.CompletedTask;
+        throw new NotImplementedException();
+    }
+
+    public Task AddAsync(DealerShipOfficeDto dealerShipOffice)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task UpdateAsync(DealerShipOfficeDto dealerShipOffice)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task DeleteAsync(DealerShipOfficeDto dealerShipOffice)
+    {
+        throw new NotImplementedException();
     }
 }
