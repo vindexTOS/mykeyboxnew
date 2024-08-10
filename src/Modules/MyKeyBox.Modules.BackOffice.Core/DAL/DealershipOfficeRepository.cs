@@ -1,5 +1,5 @@
-﻿/*using MyKeyBox.Modules.BackOffice.Core.Repositories;
-using MyKeyBox.Shared.Abstractions.Persistence;
+﻿using MyKeyBox.Modules.BackOffice.Core.Repositories;
+using MyKeyBox.Shared.Infrastructure.Persistence;
 
 namespace MyKeyBox.Modules.BackOffice.Core.DAL;
 
@@ -7,4 +7,4 @@ internal class DealershipOfficeRepository:Repository<,>,IDealershipOfficeReposit
 {
     public DealershipOfficeRepository() : base(dbContext)
     { }
-}*/
+}

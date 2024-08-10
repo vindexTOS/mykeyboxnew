@@ -5,7 +5,7 @@ namespace MyKeyBox.Modules.BackOffice.Core.Repositories;
 
 internal interface IDealershipOfficeRepository
 {
-    public Task GetByIdAsync(int id);
+    public Task<DealerShipOffice?> GetByIdAsync(int id);
     public Task<List<DealerShipOffice>> GetAllAsync();
     public Task<bool> ExistById(int id);
     public Task<EntityEntry<DealerShipOffice>> AddAsync(DealerShipOffice entity);

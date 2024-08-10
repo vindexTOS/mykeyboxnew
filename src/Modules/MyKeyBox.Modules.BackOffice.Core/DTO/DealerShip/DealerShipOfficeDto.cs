@@ -4,8 +4,7 @@ namespace MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip;
 
 public class DealerShipOfficeDto
 {
-    public int DealerId { get; }
-    [Required] 
+    public int DealerId { get; set; }
     public string DealerName {get; set;} = null!;
     [Required]
     public double LocationLat {get; set;}

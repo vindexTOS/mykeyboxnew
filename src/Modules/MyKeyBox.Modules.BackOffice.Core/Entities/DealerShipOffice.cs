@@ -2,7 +2,7 @@
 
 namespace MyKeyBox.Modules.BackOffice.Core.Entities;
 
-internal class DealerShipOffice:Entity
+public class DealerShipOffice:Entity
 {
     public string DealerName {get; set;} = null!;
 

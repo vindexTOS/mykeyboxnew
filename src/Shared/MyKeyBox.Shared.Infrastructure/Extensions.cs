@@ -1,5 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 [assembly:InternalsVisibleTo("MyKeyBox.Bootstraper")]
@@ -16,5 +17,15 @@ internal static class Extensions
     {
         builder.UseMiddleware<ErrorHandlerMiddleware>();
         return builder;
+    }
+
+    public static T GetOptions<T>(this IServiceCollection collection,string sectionName) where T : new()
+    {
+        using var serviceProvider = collection.BuildServiceProvider();
+        var configuration = serviceProvider.GetRequiredService<IConfiguration>();
+        var section = configuration.GetSection(sectionName);
+        var options = new T();
+        section.Bind(options);
+        return options;
     }
 }

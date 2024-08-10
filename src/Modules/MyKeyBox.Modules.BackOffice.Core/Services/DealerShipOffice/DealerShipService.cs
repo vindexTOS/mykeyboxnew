@@ -1,13 +1,20 @@
 ﻿using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip;
+using MyKeyBox.Modules.BackOffice.Core.Exceptions;
+using MyKeyBox.Modules.BackOffice.Core.Repositories;
 
 
 namespace MyKeyBox.Modules.BackOffice.Core.Services.DealerShipOffice;
 
-internal class DealerShipService:IDealerShipOfficeService
+internal class DealerShipService(IDealershipOfficeRepository dealershipOfficeRepository):IDealerShipOfficeService
 {
-    public Task GetAsync(int id)
+    public async Task<DealerShipOfficeDto> GetAsync(int id)
     {
-        throw new NotImplementedException();
+        var dealership=await dealershipOfficeRepository.GetByIdAsync(id);
+        if (dealership is null)
+            throw new DealershipNotFoundException(id);
+        
+         
+        return new DealerShipOfficeDto();
     }
 
     public Task AddAsync(DealerShipOfficeDto dealerShipOffice)
@@ -15,8 +22,12 @@ internal class DealerShipService:IDealerShipOfficeService
         throw new NotImplementedException();
     }
 
-    public Task UpdateAsync(DealerShipOfficeDto dealerShipOffice)
+    public async Task UpdateAsync(DealerShipOfficeDto dealerShipOffice)
     {
+        var dealership=await dealershipOfficeRepository.GetByIdAsync(dealerShipOffice.DealerId);
+        if (dealership is null)
+            throw new DealershipNotFoundException(dealerShipOffice.DealerId);
+        
         throw new NotImplementedException();
     }
 
