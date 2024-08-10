@@ -4,7 +4,7 @@ namespace MyKeyBox.Modules.BackOffice.Api.Controllers;
 
 [ApiController]
 [Route(BasePath +"/[controller]")]
-internal abstract class BaseController:ControllerBase
+public abstract class BaseController:ControllerBase
 {
     protected const string BasePath = "backoffice-module";
 }

@@ -1,22 +1,37 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip;
+using MyKeyBox.Modules.BackOffice.Core.Services.DealerShipOffice;
 
 namespace MyKeyBox.Modules.BackOffice.Api.Controllers;
 
 [Route(BasePath)]
-internal class DealershipManagementController:BaseController
+public class DealershipManagementController(IDealerShipOfficeService dealerShipOfficeService):BaseController
 {
-    [HttpPost(nameof(DealerRegistration))]
-    public async Task<IActionResult> DealerRegistration(DealerShipOfficeDto dealerShipOfficeDto)
+    [HttpGet("GetDealership/{id}")]
+    public async Task<IActionResult> GetDealership(int id)
     {
-        await Task.CompletedTask;
+        await dealerShipOfficeService.GetAsync(id);
         return Ok();
     }
     
-    [HttpPut(nameof(DealerRegistration))]
+    [HttpPost(nameof(AddDealerShip))]
+    public async Task<IActionResult> AddDealerShip(DealerShipOfficeDto dealerShipOfficeDto)
+    {
+        await dealerShipOfficeService.AddAsync(dealerShipOfficeDto);
+        return Ok();
+    }
+    
+    [HttpPut(nameof(UpdateDealership))]
     public async Task<IActionResult> UpdateDealership(DealerShipOfficeDto dealerShipOfficeDto)
     {
-        await Task.CompletedTask;
+        await dealerShipOfficeService.UpdateAsync(dealerShipOfficeDto);
+        return Ok();
+    }
+    
+    [HttpPut(nameof(DeleteDealerShip))]
+    public async Task<IActionResult> DeleteDealerShip(DealerShipOfficeDto dealerShipOfficeDto)
+    {
+        await dealerShipOfficeService.DeleteAsync(dealerShipOfficeDto);
         return Ok();
     }
 }
