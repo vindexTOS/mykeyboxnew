@@ -19,6 +19,18 @@
 # Mono auto generated files
 mono_crash.*
 
+# Ignore build directories
+bin/
+obj/
+
+# Ignore build configurations
+Debug/
+Release/
+
+# Rider-specific files
+.idea/
+
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
