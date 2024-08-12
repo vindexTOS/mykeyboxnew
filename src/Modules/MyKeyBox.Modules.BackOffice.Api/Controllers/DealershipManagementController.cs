@@ -7,6 +7,13 @@ namespace MyKeyBox.Modules.BackOffice.Api.Controllers;
 [Route(BasePath)]
 public class DealershipManagementController(IDealerShipOfficeService dealerShipOfficeService):BaseController
 {
+    [HttpGet(nameof(GetAllTemplateDealership))]
+    public async Task<IActionResult> GetAllTemplateDealership()
+    {
+        await dealerShipOfficeService.GetAllTemplateAsync();
+        return Ok();
+    }
+    
     [HttpGet("GetDealership/{id}")]
     public async Task<IActionResult> GetDealership(int id)
     {
@@ -14,8 +21,8 @@ public class DealershipManagementController(IDealerShipOfficeService dealerShipO
         return Ok();
     }
     
-    [HttpPost(nameof(AddDealerShip))]
-    public async Task<IActionResult> AddDealerShip(DealerShipOfficeDto dealerShipOfficeDto)
+    [HttpPost(nameof(AddDealership))]
+    public async Task<IActionResult> AddDealership(DealerShipOfficeDto dealerShipOfficeDto)
     {
         await dealerShipOfficeService.AddAsync(dealerShipOfficeDto);
         return Ok();

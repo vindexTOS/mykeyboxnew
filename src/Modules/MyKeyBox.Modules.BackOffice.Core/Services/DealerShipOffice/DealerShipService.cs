@@ -7,6 +7,12 @@ namespace MyKeyBox.Modules.BackOffice.Core.Services.DealerShipOffice;
 
 internal class DealerShipService(IDealershipOfficeRepository dealershipOfficeRepository):IDealerShipOfficeService
 {
+    public async Task<List<AllDealershipTemplateDto>> GetAllTemplateAsync()
+    {
+         var template=await dealershipOfficeRepository.GetAllAsync();
+         return template.Select(x => new AllDealershipTemplateDto(x.Id, x.DealerName)).ToList();
+    }
+
     public async Task<DealerShipOfficeDto> GetAsync(int id)
     {
         var dealership=await dealershipOfficeRepository.GetByIdAsync(id);
