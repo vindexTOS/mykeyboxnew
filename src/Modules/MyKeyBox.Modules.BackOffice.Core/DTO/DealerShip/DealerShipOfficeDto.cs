@@ -4,7 +4,6 @@ namespace MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip;
 
 public class DealerShipOfficeDto
 {
-    public int DealerId { get; set; }
     public string DealerName {get; set;} = null!;
     [Required]
     public double LocationLat {get; set;}
@@ -31,15 +30,14 @@ public class DealerShipOfficeDto
     
     public string? BackupPersonJobTitle { get; set; }
     
-    [Compare(nameof(ResponsiblePersonPhone),ErrorMessage = "Backup phone number and Responsible Person Phone is matched please change number")]
+    [Phone]
     public string? BackupPersonPhone { get; set; }
     
-    [Compare(nameof(ResponsiblePersonEmail),ErrorMessage = "Backup email and Responsible Person Email is matched please change number")]
+    [EmailAddress]
     public string? BackupPersonEmail { get; set; }
 
     public string? Notes { get; set; }
-    public string? Logo { get; set; }
     public string? ContactNumber { get; set; }
-    public string? MCcode { get; set; }
-    public string? ZipCode { get; set; }
+    public int? MCcode { get; set; }
+    public int? ZipCode { get; set; }
 }

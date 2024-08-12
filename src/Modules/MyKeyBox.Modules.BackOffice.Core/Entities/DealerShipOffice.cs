@@ -22,7 +22,7 @@ public class DealerShipOffice:Entity
     public string ResponsiblePersonPhone {get; set; } = null!;
 
     public string ResponsiblePersonEmail {get; set; } = null!;
-    public DateTime RegistrationDateTime { get; init; }=DateTime.Now;
+    public DateTime RegistrationDateTime { get; init; }
     // Start Nullable Data
     public string? BackupPersonFirstName { get; set; }
     
@@ -35,8 +35,7 @@ public class DealerShipOffice:Entity
     public string? BackupPersonEmail { get; set; }
 
     public string? Notes { get; set; }
-    public string? Logo { get; set; }
     public string? ContactNumber { get; set; }
-    public string? MCcode { get; set; }
-    public string? ZipCode { get; set; }
+    public int? MCcode { get; set; }
+    public int? ZipCode { get; set; }
 }

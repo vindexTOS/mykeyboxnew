@@ -12,7 +12,7 @@ using MyKeyBox.Modules.BackOffice.Core.DAL;
 namespace MyKeyBox.Modules.BackOffice.Core.DAL.Migrations
 {
     [DbContext(typeof(BackOfficeDbContext))]
-    [Migration("20240811134242_InitBackOffcieModule")]
+    [Migration("20240812180229_InitBackOffcieModule")]
     partial class InitBackOffcieModule
     {
         /// <inheritdoc />
@@ -35,22 +35,28 @@ namespace MyKeyBox.Modules.BackOffice.Core.DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BackupPersonEmail")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("BackupPersonFirstName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("BackupPersonJobTitle")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("BackupPersonLastName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("BackupPersonPhone")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("ContactNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("DealerName")
                         .IsRequired()
@@ -58,7 +64,8 @@ namespace MyKeyBox.Modules.BackOffice.Core.DAL.Migrations
 
                     b.Property<string>("GoogleLink")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<double>("LocationLat")
                         .HasColumnType("float");
@@ -66,43 +73,48 @@ namespace MyKeyBox.Modules.BackOffice.Core.DAL.Migrations
                     b.Property<double>("LocationLong")
                         .HasColumnType("float");
 
-                    b.Property<string>("Logo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MCcode")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("MCcode")
+                        .HasMaxLength(100)
+                        .HasColumnType("int");
 
                     b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<DateTime>("RegistrationDateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ResponsiblePersonEmail")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ResponsiblePersonFirstName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ResponsiblePersonJobTitle")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ResponsiblePersonLastName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ResponsiblePersonPhone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<byte>("WorkingHoursPerDay")
                         .HasColumnType("tinyint");
 
-                    b.Property<string>("ZipCode")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("ZipCode")
+                        .HasMaxLength(50)
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
