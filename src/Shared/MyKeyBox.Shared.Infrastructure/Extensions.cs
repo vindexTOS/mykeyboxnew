@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MyKeyBox.Shared.Infrastructure.Persistence.SSMS;
 
 [assembly:InternalsVisibleTo("MyKeyBox.Bootstraper")]
 namespace MyKeyBox.Shared.Infrastructure;
@@ -10,6 +11,7 @@ internal static class Extensions
     public static IServiceCollection AddInfrastructure(this IServiceCollection collection)
     {
         collection.AddSingleton<ErrorHandlerMiddleware>();
+        collection.AddSsms();
         return collection;
     }
 

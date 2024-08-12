@@ -19,7 +19,7 @@ internal abstract class Repository<T, TDbContext>
     public async Task<T?> GetByIdAsync(int id,CancellationToken token= default)
         => await DbContext
             .Set<T>()
-            .FirstOrDefaultAsync(x=>x.Id==id,token);
+            .SingleOrDefaultAsync(x=>x.Id==id,token);
 
 
     public async Task<List<T>> GetAllAsync()

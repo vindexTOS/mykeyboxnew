@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyKeyBox.Bootstraper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cbff3687cab9c633809fb3b927a4b222ed025f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+294ce9d9eb356e9e1372cf46122aec2f3fb757cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyKeyBox.Bootstraper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyKeyBox.Bootstraper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

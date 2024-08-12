@@ -13,7 +13,7 @@ public static class Extension
         return collection;
     }
 
-    public static IServiceCollection AddSsms<T>(this IServiceCollection collection) where T : DbContext 
+    /*public static IServiceCollection AddSsms<T>(this IServiceCollection collection) where T : DbContext 
     {
         var options = collection.GetOptions<SsmsOptions>("SSMS");
         collection.AddDbContext<T>(x => x.UseSqlServer(options.ConnectionString));
@@ -23,5 +23,5 @@ public static class Extension
         dbContext.Database.Migrate();
         
         return collection;
-    }
+    }*/
 }
