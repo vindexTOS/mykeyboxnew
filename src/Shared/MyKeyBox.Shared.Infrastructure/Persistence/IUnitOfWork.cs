@@ -1,6 +1,6 @@
 ﻿namespace MyKeyBox.Shared.Infrastructure.Persistence;
 
-public class IUnitOfWork
+public interface IUnitOfWork
 {
-    
+    public Task<bool> SaveChangesAsync();
 }
