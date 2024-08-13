@@ -19,22 +19,14 @@ public class DealershipManagementController(IDealerShipOfficeService dealerShipO
     
     [HttpPost(nameof(AddDealership))]
     public async Task<IActionResult> AddDealership(DealerShipRegistration dealerShipRegistration)
-    {
-        await dealerShipOfficeService.AddAsync(dealerShipRegistration);
-        return Ok();
-    }
+        => Ok(await dealerShipOfficeService.AddAsync(dealerShipRegistration));
     
     [HttpPut(nameof(UpdateDealership))]
     public async Task<IActionResult> UpdateDealership(DealershipUpdate dealerShipRegistration)
-    {
-        await dealerShipOfficeService.UpdateAsync(dealerShipRegistration);
-        return Ok();
-    }
+        =>Ok(await dealerShipOfficeService.UpdateAsync(dealerShipRegistration));
+
     
     [HttpDelete(nameof(DeleteDealerShip))]
     public async Task<IActionResult> DeleteDealerShip(DealerShipRegistration dealerShipRegistration)
-    {
-        await dealerShipOfficeService.DeleteAsync(dealerShipRegistration);
-        return Ok();
-    }
+        => Ok(await dealerShipOfficeService.DeleteAsync(dealerShipRegistration));
 }

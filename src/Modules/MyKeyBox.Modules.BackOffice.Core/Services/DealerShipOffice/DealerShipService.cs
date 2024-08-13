@@ -48,7 +48,7 @@ internal class DealerShipService(IDealershipOfficeRepository dealershipOfficeRep
         };
     }
 
-    public async Task AddAsync(DealerShipRegistration dealership)
+    public async Task<bool> AddAsync(DealerShipRegistration dealership)
     {
         var entry = await dealershipOfficeRepository.AddAsync(new Entities.DealerShipOffice
         {
@@ -73,11 +73,14 @@ internal class DealerShipService(IDealershipOfficeRepository dealershipOfficeRep
             MCcode=dealership.MCcode,
             ZipCode= dealership.ZipCode,
         });
-        if (entry.State == EntityState.Added)
-            await uow.SaveChangesAsync();
+        
+        if (entry.State != EntityState.Added)
+            return false;
+        
+        return await uow.SaveChangesAsync();
     }
 
-    public async Task UpdateAsync(DealershipUpdate dealerShipOffice)
+    public async Task<bool> UpdateAsync(DealershipUpdate dealerShipOffice)
     {
         var dealership=await dealershipOfficeRepository.GetByIdAsync(dealerShipOffice.Id);
         if (dealership is null)
@@ -106,11 +109,13 @@ internal class DealerShipService(IDealershipOfficeRepository dealershipOfficeRep
             dealership.ZipCode= dealerShipOffice.ZipCode;
         }
         var state=await dealershipOfficeRepository.UpdateAsync(dealership);
-        if (state.State == EntityState.Modified)
-            await uow.SaveChangesAsync();
+        if (state.State != EntityState.Modified)
+            return false;
+        
+        return await uow.SaveChangesAsync();
     }
 
-    public Task DeleteAsync(DealerShipRegistration dealerShipOffice)
+    public Task<bool> DeleteAsync(DealerShipRegistration dealerShipOffice)
     {
         throw new NotImplementedException();
     }

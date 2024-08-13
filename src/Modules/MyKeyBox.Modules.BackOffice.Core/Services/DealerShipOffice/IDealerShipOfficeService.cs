@@ -7,7 +7,7 @@ public interface IDealerShipOfficeService
 {
     public Task<List<AllDealershipTemplate>> GetAllTemplateAsync();
     public Task<BaseResponse> GetAsync(int id);
-    public Task AddAsync(DealerShipRegistration dealership);
-    public Task UpdateAsync(DealershipUpdate dealerShipOffice);
-    public Task DeleteAsync(DealerShipRegistration dealerShipOffice);
+    public Task<bool> AddAsync(DealerShipRegistration dealership);
+    public Task<bool> UpdateAsync(DealershipUpdate dealerShipOffice);
+    public Task<bool> DeleteAsync(DealerShipRegistration dealerShipOffice);
 }
