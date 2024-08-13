@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip;
 using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip.Request;
 using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip.Response;
 using MyKeyBox.Modules.BackOffice.Core.Exceptions;
@@ -16,40 +17,61 @@ internal class DealerShipService(IDealershipOfficeRepository dealershipOfficeRep
          return template.Select(x => new AllDealershipTemplate(x.Id, x.DealerName)).ToList();
     }
 
-    public async Task<DealerShipRegistration> GetAsync(int id)
+    public async Task<BaseResponse> GetAsync(int id)
     {
         var dealership=await dealershipOfficeRepository.GetByIdAsync(id);
         if (dealership is null)
             throw new DealershipNotFoundException(id);
         
          
-        return new DealerShipRegistration();
+        return  new BaseResponse
+        {
+            DealerName=dealership.DealerName,
+            LocationLat=dealership.LocationLat,
+            LocationLong= dealership.LocationLong,
+            GoogleLink=dealership.GoogleLink,
+            WorkingHoursPerDay=dealership.WorkingHoursPerDay,
+            ResponsiblePersonFirstName= dealership.ResponsiblePersonFirstName,
+            ResponsiblePersonLastName=dealership.ResponsiblePersonLastName,
+            ResponsiblePersonJobTitle=dealership.ResponsiblePersonJobTitle,
+            ResponsiblePersonPhone= dealership.ResponsiblePersonPhone,
+            ResponsiblePersonEmail=dealership.ResponsiblePersonEmail,
+            BackupPersonFirstName= dealership.BackupPersonFirstName,
+            BackupPersonLastName=dealership.BackupPersonLastName,
+            BackupPersonJobTitle= dealership.BackupPersonJobTitle,
+            BackupPersonPhone=dealership.BackupPersonPhone,
+            BackupPersonEmail=dealership.BackupPersonEmail,
+            Notes= dealership.Notes,
+            ContactNumber=dealership.ContactNumber,
+            MCcode=dealership.MCcode,
+            ZipCode= dealership.ZipCode,
+        };
     }
 
-    public async Task AddAsync(DealerShipRegistration dealerShipOffice)
+    public async Task AddAsync(DealerShipRegistration dealership)
     {
         var entry = await dealershipOfficeRepository.AddAsync(new Entities.DealerShipOffice
         {
-            DealerName=dealerShipOffice.DealerName,
-            LocationLat=dealerShipOffice.LocationLat,
-            LocationLong= dealerShipOffice.LocationLong,
-            GoogleLink=dealerShipOffice.GoogleLink,
-            WorkingHoursPerDay=dealerShipOffice.WorkingHoursPerDay,
-            ResponsiblePersonFirstName= dealerShipOffice.ResponsiblePersonFirstName,
-            ResponsiblePersonLastName=dealerShipOffice.ResponsiblePersonLastName,
-            ResponsiblePersonJobTitle=dealerShipOffice.ResponsiblePersonJobTitle,
-            ResponsiblePersonPhone= dealerShipOffice.ResponsiblePersonPhone,
-            ResponsiblePersonEmail=dealerShipOffice.ResponsiblePersonEmail,
+            DealerName=dealership.DealerName,
+            LocationLat=dealership.LocationLat,
+            LocationLong= dealership.LocationLong,
+            GoogleLink=dealership.GoogleLink,
+            WorkingHoursPerDay=dealership.WorkingHoursPerDay,
+            ResponsiblePersonFirstName= dealership.ResponsiblePersonFirstName,
+            ResponsiblePersonLastName=dealership.ResponsiblePersonLastName,
+            ResponsiblePersonJobTitle=dealership.ResponsiblePersonJobTitle,
+            ResponsiblePersonPhone= dealership.ResponsiblePersonPhone,
+            ResponsiblePersonEmail=dealership.ResponsiblePersonEmail,
             RegistrationDateTime=DateTime.Now,
-            BackupPersonFirstName= dealerShipOffice.BackupPersonFirstName,
-            BackupPersonLastName=dealerShipOffice.BackupPersonLastName,
-            BackupPersonJobTitle= dealerShipOffice.BackupPersonJobTitle,
-            BackupPersonPhone=dealerShipOffice.BackupPersonPhone,
-            BackupPersonEmail=dealerShipOffice.BackupPersonEmail,
-            Notes= dealerShipOffice.Notes,
-            ContactNumber=dealerShipOffice.ContactNumber,
-            MCcode=dealerShipOffice.MCcode,
-            ZipCode= dealerShipOffice.ZipCode,
+            BackupPersonFirstName= dealership.BackupPersonFirstName,
+            BackupPersonLastName=dealership.BackupPersonLastName,
+            BackupPersonJobTitle= dealership.BackupPersonJobTitle,
+            BackupPersonPhone=dealership.BackupPersonPhone,
+            BackupPersonEmail=dealership.BackupPersonEmail,
+            Notes= dealership.Notes,
+            ContactNumber=dealership.ContactNumber,
+            MCcode=dealership.MCcode,
+            ZipCode= dealership.ZipCode,
         });
         if (entry.State == EntityState.Added)
             await uow.SaveChangesAsync();

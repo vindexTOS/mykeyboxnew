@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip;
 using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip.Request;
 using MyKeyBox.Modules.BackOffice.Core.Services.DealerShipOffice;
 
@@ -10,17 +9,13 @@ public class DealershipManagementController(IDealerShipOfficeService dealerShipO
 {
     [HttpGet(nameof(GetAllTemplateDealership))]
     public async Task<IActionResult> GetAllTemplateDealership()
-    {
-        await dealerShipOfficeService.GetAllTemplateAsync();
-        return Ok();
-    }
+        => Ok(await dealerShipOfficeService.GetAllTemplateAsync());
+        
     
     [HttpGet("GetDealership/{id}")]
     public async Task<IActionResult> GetDealership(int id)
-    {
-        await dealerShipOfficeService.GetAsync(id);
-        return Ok();
-    }
+        =>Ok( await dealerShipOfficeService.GetAsync(id));
+    
     
     [HttpPost(nameof(AddDealership))]
     public async Task<IActionResult> AddDealership(DealerShipRegistration dealerShipRegistration)
@@ -36,7 +31,7 @@ public class DealershipManagementController(IDealerShipOfficeService dealerShipO
         return Ok();
     }
     
-    [HttpPut(nameof(DeleteDealerShip))]
+    [HttpDelete(nameof(DeleteDealerShip))]
     public async Task<IActionResult> DeleteDealerShip(DealerShipRegistration dealerShipRegistration)
     {
         await dealerShipOfficeService.DeleteAsync(dealerShipRegistration);
