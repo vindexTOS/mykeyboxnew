@@ -1,5 +1,14 @@
 ﻿namespace MyKeyBox.Shared.Infrastructure;
 
+/// <summary>
+/// Warning : if you need return success type please ensure TEntity property names and Dto names is same for AsDto method
+/// same for AsEntity otherwise reflection logic will not work
+/// </summary>
+/// <param name="entity"></param>
+/// <typeparam name="TEntity"></typeparam>
+/// <typeparam name="TDto"></typeparam>
+/// <returns></returns>
+/// <exception cref="InvalidCastException"></exception>
 public class Transformation
 {
     public async Task<TDto> AsDto<TEntity,TDto> (TEntity entity) where TDto:new()
@@ -30,9 +39,5 @@ public class Transformation
     {
         
     }
-
-    private static U AsToAs<T, U>(T type)
-    {
-        
-    }*/
+*/
 }
