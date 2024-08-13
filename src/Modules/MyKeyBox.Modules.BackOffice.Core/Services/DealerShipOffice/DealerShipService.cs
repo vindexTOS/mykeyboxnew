@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip;
 using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip.Request;
 using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip.Response;
 using MyKeyBox.Modules.BackOffice.Core.Exceptions;
 using MyKeyBox.Modules.BackOffice.Core.Repositories;
+using MyKeyBox.Shared.Infrastructure;
 using MyKeyBox.Shared.Infrastructure.Persistence;
 
 
@@ -22,30 +22,8 @@ internal class DealerShipService(IDealershipOfficeRepository dealershipOfficeRep
         var dealership=await dealershipOfficeRepository.GetByIdAsync(id);
         if (dealership is null)
             throw new DealershipNotFoundException(id);
-        
-         
-        return  new BaseResponse
-        {
-            DealerName=dealership.DealerName,
-            LocationLat=dealership.LocationLat,
-            LocationLong= dealership.LocationLong,
-            GoogleLink=dealership.GoogleLink,
-            WorkingHoursPerDay=dealership.WorkingHoursPerDay,
-            ResponsiblePersonFirstName= dealership.ResponsiblePersonFirstName,
-            ResponsiblePersonLastName=dealership.ResponsiblePersonLastName,
-            ResponsiblePersonJobTitle=dealership.ResponsiblePersonJobTitle,
-            ResponsiblePersonPhone= dealership.ResponsiblePersonPhone,
-            ResponsiblePersonEmail=dealership.ResponsiblePersonEmail,
-            BackupPersonFirstName= dealership.BackupPersonFirstName,
-            BackupPersonLastName=dealership.BackupPersonLastName,
-            BackupPersonJobTitle= dealership.BackupPersonJobTitle,
-            BackupPersonPhone=dealership.BackupPersonPhone,
-            BackupPersonEmail=dealership.BackupPersonEmail,
-            Notes= dealership.Notes,
-            ContactNumber=dealership.ContactNumber,
-            MCcode=dealership.MCcode,
-            ZipCode= dealership.ZipCode,
-        };
+        Transformation transformation=new Transformation();
+        return await transformation.AsDto<Entities.DealerShipOffice, BaseResponse>(dealership);
     }
 
     public async Task<bool> AddAsync(DealerShipRegistration dealership)
