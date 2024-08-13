@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyKeyBox.Tests.EndToEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+294ce9d9eb356e9e1372cf46122aec2f3fb757cf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a7ef481e9bf542c1a2c3ff32cabb788e0a04611")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyKeyBox.Tests.EndToEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyKeyBox.Tests.EndToEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

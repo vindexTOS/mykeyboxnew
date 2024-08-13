@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip;
+using MyKeyBox.Modules.BackOffice.Core.DTO.DealerShip.Request;
 using MyKeyBox.Modules.BackOffice.Core.Services.DealerShipOffice;
 
 namespace MyKeyBox.Modules.BackOffice.Api.Controllers;
@@ -22,23 +23,23 @@ public class DealershipManagementController(IDealerShipOfficeService dealerShipO
     }
     
     [HttpPost(nameof(AddDealership))]
-    public async Task<IActionResult> AddDealership(DealerShipOfficeDto dealerShipOfficeDto)
+    public async Task<IActionResult> AddDealership(DealerShipRegistration dealerShipRegistration)
     {
-        await dealerShipOfficeService.AddAsync(dealerShipOfficeDto);
+        await dealerShipOfficeService.AddAsync(dealerShipRegistration);
         return Ok();
     }
     
     [HttpPut(nameof(UpdateDealership))]
-    public async Task<IActionResult> UpdateDealership(DealerShipOfficeDto dealerShipOfficeDto)
+    public async Task<IActionResult> UpdateDealership(DealershipUpdate dealerShipRegistration)
     {
-        await dealerShipOfficeService.UpdateAsync(dealerShipOfficeDto);
+        await dealerShipOfficeService.UpdateAsync(dealerShipRegistration);
         return Ok();
     }
     
     [HttpPut(nameof(DeleteDealerShip))]
-    public async Task<IActionResult> DeleteDealerShip(DealerShipOfficeDto dealerShipOfficeDto)
+    public async Task<IActionResult> DeleteDealerShip(DealerShipRegistration dealerShipRegistration)
     {
-        await dealerShipOfficeService.DeleteAsync(dealerShipOfficeDto);
+        await dealerShipOfficeService.DeleteAsync(dealerShipRegistration);
         return Ok();
     }
 }

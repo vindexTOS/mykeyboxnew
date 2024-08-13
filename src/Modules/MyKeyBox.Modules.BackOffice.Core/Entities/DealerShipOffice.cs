@@ -22,7 +22,7 @@ public class DealerShipOffice:Entity
     public string ResponsiblePersonPhone {get; set; } = null!;
 
     public string ResponsiblePersonEmail {get; set; } = null!;
-    public DateTime RegistrationDateTime { get; init; }
+    public DateTime RegistrationDateTime { get; set; }
     // Start Nullable Data
     public string? BackupPersonFirstName { get; set; }
     
